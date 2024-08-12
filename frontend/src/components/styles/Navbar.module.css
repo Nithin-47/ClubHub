@@ -1,0 +1,104 @@
+.header {
+    background-color: var(--md-sys-color-primary-container-light);
+    opacity: 0.9;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 5rem;
+}
+
+.menuIconButton {
+    display: none;
+}
+
+.title {
+    margin-left: 3rem;
+    font-family: 'Shadows Into Light', cursive !important;
+    user-select: none;
+    flex-grow: 1;
+}
+
+.navLinks {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    min-width: 30rem;
+}
+
+.navLinks li {
+    list-style: none;
+    text-align: center;
+    height: max-content;
+    cursor: pointer;
+}
+
+.navLinks li a,
+.navLinks li p {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.linkUnderline {
+    visibility: hidden;
+    opacity: 0;
+    width: 80%;
+    height: 2px;
+    background: var(--md-sys-color-on-primary-container);
+    transition: 0.75s;
+}
+
+.navLink {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.navLink:hover .linkUnderline {
+    visibility: visible;
+    opacity: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--md-sys-color-tertiary-text);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        justify-content: center;
+    }
+
+    .title {
+        margin-left: 0;
+        flex-grow: 0;
+    }
+
+    .menuIconButton {
+        display: block;
+        position: absolute;
+        border: none;
+        background: none;
+        left: 2rem;
+    }
+
+    .navLinks {
+        position: absolute;
+        top: 5rem;
+
+        align-items: center;
+        height: 4rem;
+        width: 100%;
+        background-color: var(--md-sys-color-primary-container);
+        transform: translateY(-10rem);
+    }
+
+    .showNavLinks {
+        transform: none;
+    }
+}

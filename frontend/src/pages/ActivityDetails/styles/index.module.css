@@ -1,0 +1,28 @@
+.base {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background:var(--md-ref-palette-primary95);
+}
+
+.eventName {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.longDetails {
+    margin-top: 1rem;
+    width: 80%;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.longDetailsHeading {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

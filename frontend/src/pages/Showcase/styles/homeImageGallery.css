@@ -1,0 +1,92 @@
+.slider {
+    position: relative;
+    width: 1200px;
+    margin: 5px auto;
+    perspective: 5000px;
+}
+
+.rotator {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 200px;
+    width: 780px;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    animation: roter 40s linear infinite;
+}
+
+.items {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+.items img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 3s ease;
+}
+
+.items:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes roter {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.rotator:hover {
+    animation-play-state: paused;
+}
+
+.items:hover img {
+    transform: scale(1.1);
+}
+
+.items:first-child {
+    transform: rotateY(calc(60deg)) translateZ(780px);
+}
+
+.items:nth-child(2) {
+    transform: rotateY(calc(120deg)) translateZ(780px);
+}
+
+.items:nth-child(3) {
+    transform: rotateY(calc(180deg)) translateZ(780px);
+}
+
+.items:nth-child(4) {
+    transform: rotateY(calc(240deg)) translateZ(780px);
+}
+
+.items:nth-child(5) {
+    transform: rotateY(calc(300deg)) translateZ(780px);
+}
+
+.items:nth-child(6) {
+    transform: rotateY(calc(360deg)) translateZ(780px);
+}
+
+.imgGalleryText {
+    color: #f2f2f2;
+    font-size: 45px;
+    padding: 8px 12px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    background: rgba(10, 6, 216, 0.231);
+}

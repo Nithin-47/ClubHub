@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+.mainSection {
+    position: relative;
+    height: calc(100vh - 5rem);
+    background-color: var(--md-sys-color-primary-container);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainText {
+    font-family: 'Lilita One', cursive !important;
+    color: var(--md-sys-color-primary);
+    font-size: 6rem;
+    z-index: 90;
+}
+
+.mainSVG {
+    width: 40%;
+    height: auto;
+    z-index: 90;
+}
+
+.woman{
+    width: 30%;
+    position: absolute;
+    right: 15px;
+    height: auto;
+    top: 1250px;
+    z-index: 90;
+}
+
+.decorator1 {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    top: 10%;
+    left: 90%;
+    background-color: var(--md-sys-color-on-primary-container);
+    border-radius: 50px;
+    animation: rotate 25s linear infinite;
+}
+
+.decorator2 {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    animation: rotate 25s linear infinite;
+}
+
+.decorator2 .shapeFill {
+    fill: var(--md-sys-color-on-primary-container);
+}
+.wave {
+    /* position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 119px;
+}
+
+.wave .shapeFill {
+    fill: var(--md-sys-color-primary-container);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(405deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainSection {
+        flex-direction: column;
+    }
+
+    .mainSVG {
+        width: auto;
+        height: 40%;
+        margin: 1rem;
+    }
+
+    .decorator1 {
+        left: 70%;
+    }
+}
